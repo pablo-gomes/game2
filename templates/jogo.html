@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modo Jogo - Adivinhe o Time</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='jogo.css') }}">
+</head>
+
+<body>
+    <main class="game-container">
+        <p class="vidas"><span id="vidas">3</span> - ❤️</p>
+        <img src="{{ url_for('static', filename='img/relogio.png') }}" alt="Relógio" class="relogio">
+
+        <header class="topo">
+            <div class="timer" id="time"><span>⏱</span> 00:
+                <span id="contador">50</span>
+            </div>
+        </header>
+        <section class="conteudo">
+
+            <div class="card-jogo">
+                <div class="info">
+                    <p>Dificuldade: <span id="dificuldade">{{ dificuldade }}</span></p>
+                    <p>Pergunta: <span id="pergunta-atual">1</span> -- <span id="total-perguntas">10</span></p>
+                </div>
+
+                <!-- Escudo do time -->
+                <div class="imagem-time">
+                    {% if time and time.escudo%}
+                    <img src="{{ time.escudo }}" alt="Escudo do {{ time.nome }}" class="escudo-time" id="escudo-time">
+                    {% else %}
+                    <div class="sem-escudo">Sem escudo disponível</div>
+                    {% endif %}
+                </div>
+
+                <!-- Inputs do usuário -->
+                <div class="inputs">
+                    <span>Nome:</span>
+                    <input type="text" id="nome" placeholder="Ex: Palmeiras, Santos, etc:" autocomplete="off">
+                    <span>Pais:</span>
+                    <input type="text" id="pais" placeholder="Ex: Brasil, Inglaterra, Espanha, etc:" autocomplete="off">
+                    <input type="text" id="liga" list="ligas" placeholder="Liga: " autocomplete="off">
+                    <datalist id="ligas">
+                        <option value="Bundesliga">
+                        <option value="Campeonato Brasileiro Série A">
+                        <option value="Champions League">
+                        <option value="Championship (Inglaterra B)">
+                        <option value="Copa do Mundo">
+                        <option value="Copa Libertadores">
+                        <option value="Eredivisie (Holanda)">
+                        <option value="Eurocopa">
+                        <option value="La Liga">
+                        <option value="Ligue 1">
+                        <option value="Premier League">
+                        <option value="Primeira Liga (Portugal)">
+                        <option value="Serie A"></option>
+                    </datalist>
+                </div>
+
+                <!-- Botões -->
+                <div style="display: flex; gap: 10px;">
+                    <button class="btn-enviar" onclick="verificar()">Enviar</button>
+                    <button class="btn-pular" id="btn-pular">Pular</button>
+                </div>  
+
+            </div>
+        </section>
+    </main>
+
+    <div class="cartao_ver"></div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    
+
+</body>
+
+</html>

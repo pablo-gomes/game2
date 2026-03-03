@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleção Libertadores</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
++
+</head>
+
+<body>
+
+    <main class="container">
+
+        <section class="dificuldade">
+
+            <div class="nome">
+
+                <h2 class="titulo">DIFICULDADE</h2>
+            </div>
+            <div class="carrossel">
+                <button class="seta esquerda" onclick="mudar(-1)">❮</button>
+
+                <div class="card">
+                    <h1 class="time" id="nivel">FÁCIL</h1>
+                    <img id="escudo" src="{{ url_for('static', filename='img/facil.png') }}">
+                    <div class="status">
+                        <p class="estrelas" id="estrelas">★★☆☆☆</p>
+                        <div class="dados">
+                            <div>
+                                ATA<br>
+                                <span class="numero" id="ata">20</span>
+                            </div>
+                            <div>
+                                MEI<br>
+                                <span class="numero" id="mei">50</span>
+                            </div>
+                            <div>
+                                DEF<br>
+                                <span class="numero" id="def">90</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="seta direita" onclick="mudar(1)">❯</button>
+            </div>
+            <button class="botao">
+                <a href="{{ url_for('jogo') }}">Pronto!</a>
+            </button>
+        </section>
+
+    </main>
+    <img src="../static/img/LOGO.png" alt="" class="logo">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

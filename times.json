@@ -1,0 +1,45 @@
+{
+  "facil": [
+    { "id": 2013, "nome": "Campeonato Brasileiro Série A" },
+    { "id": 2021, "nome": "Premier League" },
+    { "id": 2014, "nome": "La Liga" }
+  ],
+
+  "medio": [
+    { "id": 2013, "nome": "Campeonato Brasileiro Série A" },
+    { "id": 2021, "nome": "Premier League" },
+    { "id": 2014, "nome": "La Liga" },
+    { "id": 2019, "nome": "Serie A" },
+    { "id": 2002, "nome": "Bundesliga" },
+    { "id": 2015, "nome": "Ligue 1" }
+  ],
+
+  "dificil": [
+    { "id": 2013, "nome": "Campeonato Brasileiro Série A" },
+    { "id": 2021, "nome": "Premier League" },
+    { "id": 2014, "nome": "La Liga" },
+    { "id": 2019, "nome": "Serie A" },
+    { "id": 2002, "nome": "Bundesliga" },
+    { "id": 2015, "nome": "Ligue 1" },
+    { "id": 2017, "nome": "Primeira Liga (Portugal)" },
+    { "id": 2003, "nome": "Eredivisie (Holanda)" },
+    { "id": 2016, "nome": "Championship (Inglaterra B)" },
+    { "id": 2152, "nome": "Copa Libertadores" }
+  ],
+
+  "HARDCORE": [
+    { "id": 2013, "nome": "Campeonato Brasileiro Série A" },
+    { "id": 2021, "nome": "Premier League" },
+    { "id": 2014, "nome": "La Liga" },
+    { "id": 2019, "nome": "Serie A" },
+    { "id": 2002, "nome": "Bundesliga" },
+    { "id": 2015, "nome": "Ligue 1" },
+    { "id": 2017, "nome": "Primeira Liga (Portugal)" },
+    { "id": 2003, "nome": "Eredivisie (Holanda)" },
+    { "id": 2016, "nome": "Championship (Inglaterra B)" },
+    { "id": 2152, "nome": "Copa Libertadores" },
+    { "id": 2000, "nome": "Copa do Mundo" },
+    { "id": 2001, "nome": "Champions League" },
+    { "id": 2018, "nome": "Eurocopa" }
+  ]
+}

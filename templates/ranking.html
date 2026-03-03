@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ranking Final</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <style>
+        .container-ranking {
+            text-align: center;
+            padding: 50px;
+            color: white;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 20px;
+            margin: 50px auto;
+            max-width: 500px;
+        }
+
+        .pontuacao-box {
+            font-size: 2em;
+            color: #ffd700;
+            /* Dourado */
+            margin: 20px 0;
+        }
+
+        .btn-voltar {
+            padding: 15px 30px;
+            background: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-ranking">
+        <h1>🏆 Fim de Jogo!</h1>
+        <p>Excelente trabalho, <strong>{{ nome }}</strong>!</p>
+
+        <div class="pontuacao-box">
+            {{ pontos }} PONTOS
+        </div>
+
+        <p>Modo: {{ modo|default("solo")|upper }}</p>
+        <p>Dificuldade: {{ dificuldade|default("facil")}} </data></p>
+
+        <br><br>
+        <div id="overlay-nome" style="display:none;">
+            <div class="box-nome">
+                <h2>Digite seu nome</h2>
+                <input type="text" id="input-nome" placeholder="Seu nome..." autocomplete="off">
+            </div>
+        </div>
+        <a href="/dificuldade" class="btn-voltar">Jogar Novamente</a>
+    </div>
+</body>
+
+</html>

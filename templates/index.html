@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='inicio.css') }}">
+</head>
+<body>
+    <div class="inicio_img">
+        <img src="../static/img/jogador2.png" alt="" class="img1">
+        <img src="../static/img/jogador3.png" alt="" class="img2">
+    </div>
+    <div class="entrar">
+    <img src="../static/img/LOGO.png" alt="">
+    <a href="{{ url_for('dificuldade') }}"><button>Click to Play   ▷</button></a>
+    <p> © 2026 Pablo arts Inc.</p>
+    </div>
+    
+</body>
+</html>

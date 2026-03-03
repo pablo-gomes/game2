@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilo.css') }}">
+</head>
+
+<body>
+    <img src="../static/img/LOGO.png" alt="" class="logo">
+    <div class="titulo">
+        <h1>Selecione o tipo de jogo</h1>
+    </div>
+    <section class="cards">
+        <div onclick="irPagina('/dificuldade?modo=solo')">
+            <h1>solo</h1>
+            <img src="../static/img/solo.png" alt="">
+        </div>
+        <div onclick="irPagina('../templates/dificuldade.html')">
+            <h1>Duo</h1>
+            <img src="../static/img/duo.png" alt="">
+        </div>
+        <div onclick="irPagina('/dificuldade?modo=squad')">
+            <h1>Squad</h1>
+            <img src="../static/img/squad.png" alt="">
+        </div>
+
+    </section> 
+    
+    <script>
+        function irPagina(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+
+</html>
