@@ -24,7 +24,7 @@ let modo = new URLSearchParams(window.location.search).get("modo") || "solo";
 let jogadores = [];
 let jogadorAtual = 0;
 let maxErros = 20;
-let maxPulos = 20;
+let maxPulos = 3;
 let maxDicas = 2;
 
 // =============================
